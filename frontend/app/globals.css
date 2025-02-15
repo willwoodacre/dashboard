@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Ingore for now */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Roboto, sans-serif;
+}
