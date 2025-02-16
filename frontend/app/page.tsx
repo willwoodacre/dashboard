@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Date from "./dateDisplay";
 
 export default function Home() {
