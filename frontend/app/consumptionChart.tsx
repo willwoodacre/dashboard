@@ -1,6 +1,7 @@
 "use client";
 
 import moment from "moment";
+import React, { ReactElement } from "react";
 import {
   BarChart,
   Bar,
@@ -10,9 +11,10 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const renderDayTick = (tickProps) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const renderDayTick = (tickProps: any): ReactElement<SVGElement> => {
   const { x, y, payload } = tickProps;
-  const { value, offset } = payload;
+  const { value } = payload;
   const date = moment(value);
   const hour = date.hour();
   const mins = date.minute();
@@ -24,12 +26,14 @@ const renderDayTick = (tickProps) => {
       </text>
     );
   }
-  return null;
+  return <React.Fragment />;
 };
 
-const formatHourMinute = (tickItem) => moment(tickItem).format("HH:mm");
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const formatHourMinute = (tickItem: any) => moment(tickItem).format("HH:mm");
 
-const ConsumptionBarChart = ({ data }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const ConsumptionBarChart = ({ data }: any) => {
   return (
     <div className="w-full h-full">
       <ResponsiveContainer width="100%" height="100%">
