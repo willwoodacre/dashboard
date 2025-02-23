@@ -9,6 +9,8 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  Area,
+  AreaChart,
 } from "recharts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -37,7 +39,7 @@ const ConsumptionBarChart = ({ data }: any) => {
   return (
     <div className="w-full h-full">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart
+        <AreaChart
           data={data}
           {...{
             overflow: "visible",
@@ -66,8 +68,14 @@ const ConsumptionBarChart = ({ data }: any) => {
             }}
           />
           <Tooltip />
-          <Bar dataKey="consumption" fill="#8884d8" barSize={40} />
-        </BarChart>
+          <Area
+            isAnimationActive={false}
+            dataKey="consumption"
+            stroke="#0a7029"
+            fill="#0a7029"
+            type="monotone"
+          />
+        </AreaChart>
       </ResponsiveContainer>
     </div>
   );

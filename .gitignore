@@ -3,6 +3,9 @@
 # secrets
 secrets.ts
 
+# images
+*.png
+
 # dependencies
 */node_modules
 */.pnp
