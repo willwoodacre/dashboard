@@ -6,7 +6,7 @@ from PIL import Image
 PATH = os.path.dirname(__file__)
 
 
-hti = Html2Image(size=(480, 800))
+hti = Html2Image(size=(480, 800), custom_flags=['--virtual-time-budget=20000'])
 hti.screenshot(url='http://localhost:3000', save_as='screenshot.png')
 
 display = auto()
